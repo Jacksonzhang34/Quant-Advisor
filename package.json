@@ -1,0 +1,19 @@
+{
+  "name": "quant-advisor",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @qa/api & npm run dev -w @qa/worker & npm run dev -w @qa/mobile",
+    "dev:api": "npm run dev -w @qa/api",
+    "dev:worker": "npm run dev -w @qa/worker",
+    "dev:mobile": "npm run dev -w @qa/mobile",
+    "infra:up": "docker compose -f infra/docker-compose.yml up -d",
+    "infra:down": "docker compose -f infra/docker-compose.yml down",
+    "lint": "echo \"(add lint later)\""
+  }
+}
+
+
